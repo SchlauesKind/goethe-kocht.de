@@ -6,23 +6,3 @@ html {
 body {
   margin: 0;
 }
-
-main {
-  color: aquamarine;
-}
-
-header {
-  color: aqua;
-  margin: 0;
-  padding: 1.5rem;
-  background-color: rgb(65, 65, 65);
-}
-
-h1 {
-  text-align: center;
-}
-
-.flex-container {
-  display: flex;
-  align-items: center;
-}
