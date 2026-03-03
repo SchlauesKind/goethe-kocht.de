@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 
 function HeaderComponent() {
   return (
-    <header className={styles.header}>
-      Content will be added soon. This component is Header
-      <Link to="/">Zu Homepage</Link>
+    <header className={`${styles.header} ${styles.flexContainer}`}>
+      <Link to="/" className={styles.item}>Zu Homepage</Link>
+      <Link to="/" className={styles.item}>Zu Homepage</Link>
     </header>
   );
 }
