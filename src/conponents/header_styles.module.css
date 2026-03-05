@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   background-color: rgb(217, 217, 218);
+  position: relative;
 }
 
 /* Flex container styles */
@@ -19,6 +20,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 /* Flex items styles */
@@ -44,4 +46,17 @@
 .logo {
   width: auto;
   height: 100%;
+}
+
+/* Menu styles */
+.menuButton {
+}
+
+.menuContainer {
+  top: 50px;
+  left: auto;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: lawngreen;
+  border: solid 1px black;
 }
