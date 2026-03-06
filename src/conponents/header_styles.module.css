@@ -10,7 +10,6 @@
   display: flex;
   align-items: center;
   background-color: rgb(217, 217, 218);
-  position: relative;
 }
 
 /* Flex container styles */
@@ -50,6 +49,7 @@
 
 /* Menu styles */
 .menuButton {
+  position: relative;
 }
 
 .menuContainer {
