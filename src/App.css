@@ -1,8 +1,12 @@
 html {
   margin: 0;
-  background-color: rgb(139, 139, 139);
+  background-color: rgb(34, 34, 34);
 }
 
 body {
   margin: 0;
+}
+
+.homePageBody {
+  color: aliceblue;
 }

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function HomePage() {
   return (
-    <div style={{ padding: "10px", background: "yellow" }}>
+    <div className="homePageBody">
       <h1>Home Page</h1>
       <h2>Hier sind links zu Ländern deren Küchen wir haben:</h2>
       <ul>
