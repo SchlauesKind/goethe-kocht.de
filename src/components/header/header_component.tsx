@@ -1,6 +1,6 @@
-import goethe_logo from "../assets/goethe_logo.jpg";
-import cook_icon from "../assets/start_to_cook.png";
-import home_icon from "../assets/home_icon.svg";
+import goethe_logo from "./goethe_logo.jpg";
+import cook_icon from "./start_to_cook.png";
+import home_icon from "./home_icon.svg";
 import styles from "./header_styles.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -46,7 +46,6 @@ function HeaderComponent() {
           <img src={goethe_logo} alt="Goethe Logo" className={styles.logo} />
         </a>
       </div>
-      
     </header>
   );
 }

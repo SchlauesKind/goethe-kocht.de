@@ -31,8 +31,8 @@
 }
 
 .gridContainer div {
-  background-color: #ffffff;
-  height: 100px;
+  background-color: #606060;
+  min-height: 100px;
 }
 
 div {

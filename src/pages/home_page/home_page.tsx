@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./main_styles.module.css";
+import flag_data from "../../assets/flag_data.json";
 
 function HomePage() {
   return (
@@ -7,11 +8,16 @@ function HomePage() {
       <h1 className={styles.homePageHeader}>Willkommen auf unserer Seite</h1>
       <h2>Entdecken Sie unsere verschiedenen Küchen</h2>
       <div className={styles.gridContainer}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        {flag_data.map((kitchen) => (
+          <div key={kitchen.id}>
+            <img
+              src={`src/assets/flags/${kitchen.filename}`}
+              alt={kitchen.title}
+            />
+            <h3>{kitchen.title}</h3>
+            <p>{kitchen.description}</p>
+          </div>
+        ))}
       </div>
       <ul>
         <li>
