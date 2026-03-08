@@ -1,0 +1,24 @@
+.homePageBody {
+  color: aliceblue;
+}
+
+.homePageHeader {
+  color: aliceblue;
+  font-size: 2.5em;
+  text-align: center;
+  border-bottom: solid 2px aliceblue;
+}
+
+.homePageBody ul {
+  list-style-type: upper-alpha;
+  padding: 50px;
+}
+
+.homePageBody .link {
+  color: #038482;
+  font-size: 1.5em;
+}
+
+.homePageBody .link:hover {
+  color: rgb(149, 166, 20);
+}
