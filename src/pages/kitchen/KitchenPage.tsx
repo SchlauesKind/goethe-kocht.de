@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import kitchen_data from "../assets/kitchen_data.json";
+import kitchen_data from "./kitchen_data.json";
 
 function NoKitchenFound() {
   return (
@@ -22,7 +22,7 @@ function KitchenPage() {
 
   return (
     <iframe
-      src={`/src/pages/public/${currentKitchen?.path}/index.html`}
+      src={`${import.meta.env.BASE_URL}/static/${currentKitchen?.path}/index.html`}
       title={currentKitchen?.title}
       width="100%"
       height="100%"

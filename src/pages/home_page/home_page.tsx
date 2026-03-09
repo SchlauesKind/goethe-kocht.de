@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./home.module.css";
-import flag_data from "../../assets/kitchen_data.json";
+import flag_data from "../kitchen/kitchen_data.json";
 
 function HomePage() {
   return (
@@ -15,7 +15,7 @@ function HomePage() {
             className={styles.gridItem}
           >
             <img
-              src={`src/assets/flags/${kitchen["flag-file-name"]}`}
+              src={`${import.meta.env.BASE_URL}flags/${kitchen["flag-file-name"]}`}
               alt={kitchen.title}
             />
             <h3>{kitchen.title}</h3>

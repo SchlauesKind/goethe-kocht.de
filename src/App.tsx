@@ -2,7 +2,7 @@
 import HomePage from "./pages/home_page/home_page";
 import PageNotFound from "./pages/not_found/not_found";
 import Credits from "./pages/credits/credits";
-import KitchenPage from "./pages/KitchenPage";
+import KitchenPage from "./pages/kitchen/KitchenPage";
 
 /* Components import */
 import HeaderComponent from "./components/header/header_component";
@@ -41,8 +41,8 @@ function App() {
           <Route path=":kitchenType" element={<KitchenPage />} />
         </Route>
         <Route path="credits" element={<Credits />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
-      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }
