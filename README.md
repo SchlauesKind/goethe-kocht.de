@@ -11,4 +11,5 @@
 
 ## deployment
 
+- check the path inside iframe, dont forget about the name of the repo!
 - run "npx gh-pages -d dist"
