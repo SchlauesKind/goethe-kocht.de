@@ -1,31 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script>
-      (function() {
-      // Пример: /schoolProject/static/russian/index.html
-      var path = window.location.pathname;
-      // Разрезаем путь по слэшам: ["", "schoolProject", "static", "russian", "index.html"]
-      var segments = path.split('/');
-      // Берем второй элемент (индекс 1), это и есть имя репо: "schoolProject"
-      var repoName = segments[1];
-      // Формируем базовый путь: "/schoolProject/"
-      var baseHref = '/' + repoName + '/';
-      var base = document.createElement('base');
-      base.href = baseHref;
-      document.head.appendChild(base);
-    })();
-    
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/schoolProject/static/russian/style.css" />
     <title>Test Kitchen</title>
-    <base href="/schoolProject/">
   </head>
   <body>
     <h1>Test Russian Page</h1>
     Some text...
-    <a href="/static/russian/page2.html">Second page</a>
+    <a href="/schoolProject/static/russian/page2.html">Second page</a>
   </body>
 </html>

@@ -1,15 +1,30 @@
-## to start development
+#
 
-- do nothing
-- run "npm run dev"
+## Commands for myself:
 
-## to build the project with "npm run build"
+- run "npm run dev" to see project in live
+- run "npm run build" to build and get /dist/
+- run "npx serve dist" to test your build
+- run "npx gh-pages -d dist" to deploy directly
 
-- do nothing
+## Checklist before deployment
+
+- check the project shown in npm localhost
+- check the build shown in serve
+- deploy
+
+## How to check the build via serve and deploy safely
+
+The project has a defined structure of the /dist/ folder so it must be the same everywhere. To do so in the serve, follow these steps:
+
 - run "npm run build"
-- to test with "npx serve dist"
+- make a dir /dist/schoolProject/
+- put content of /dist/ into /dist/schoolProject/
+- run "npx serve dist" to test your build
 
-## deployment
+After you do these steps, the /dist/ is probably broken and won't work on GitHub. To repair it, do folowing steps:
 
-- check the path inside iframe, dont forget about the name of the repo!
-- run "npx gh-pages -d dist"
+- run "npm run build"
+- run "npx gh-pages -d dist" to deploy
+
+Done;
