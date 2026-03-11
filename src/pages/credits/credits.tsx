@@ -12,6 +12,15 @@ function Credits() {
         official views of Goethe Gymnasium Dortmund. All content is provided "as
         is" without any warranties.
       </p>
+      <h1>Sources</h1>
+      <ul>
+        <li>
+          <a href="https://www.countryflags.com/">Country Flags</a>
+        </li>
+        <li>
+          <a href="https://www.svgrepo.com/">SVG Icons Repo</a>
+        </li>
+      </ul>
     </div>
   );
 }
