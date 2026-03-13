@@ -15,10 +15,12 @@ function Credits() {
       <h1>Sources</h1>
       <ul>
         <li>
-          <a href="https://www.countryflags.com/">Country Flags</a>
+          Country Flags:<a href="https://commons.wikimedia.org/wiki/Main_Page"> https://commons.wikimedia.org/wiki/Main_Page</a>
+          (open domain licence)
         </li>
         <li>
-          <a href="https://www.svgrepo.com/">SVG Icons Repo</a>
+          SVG Icons: <a href="https://www.svgrepo.com/">https://www.svgrepo.com/</a>
+          (open-licence)
         </li>
       </ul>
     </div>
