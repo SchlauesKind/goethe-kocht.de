@@ -1,0 +1,21 @@
+/* Up button styles */
+
+.upButton {
+  opacity: 0.5;
+  position: fixed;
+  bottom: 90px;
+  left: 20px;
+  width: 0;
+  height: 0;
+}
+
+.upButton:hover {
+  transition: 0.2s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.upButton .logo {
+  width: 10vh;
+  height: 10vh;
+}

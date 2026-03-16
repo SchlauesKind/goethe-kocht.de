@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import styles from "./home.module.css";
 import flag_data from "../kitchen/kitchen_data.json";
+import UpButton from "../../components/up_button/up_button";
 
 function HomePage() {
   return (
     <div className={styles.homePageBody}>
-      <h2 style={{ margin: "10px auto", width: "fit-content"}}>Entdecken Sie unsere verschiedenen Küchen:</h2>
+      <h2 style={{ margin: "10px auto", width: "fit-content" }}>
+        Entdecken Sie unsere verschiedenen Küchen:
+      </h2>
       <div className={styles.gridContainer}>
         {flag_data.map((kitchen) => (
           <Link
@@ -23,7 +26,7 @@ function HomePage() {
           </Link>
         ))}
       </div>
-      
+      <UpButton />
     </div>
   );
 }
