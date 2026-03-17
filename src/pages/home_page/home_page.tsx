@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./home.module.css";
 import flag_data from "../kitchen/kitchen_data.json";
-import UpButton from "../../components/up_button/up_button";
 
 function HomePage() {
   return (
@@ -39,7 +38,6 @@ function HomePage() {
           </div>
         ))}
       </div>
-      <UpButton />
     </div>
   );
 }
