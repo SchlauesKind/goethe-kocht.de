@@ -6,7 +6,7 @@ import UpButton from "../../components/up_button/up_button";
 function HomePage() {
   return (
     <div className={styles.homePageBody}>
-      <h2 style={{ margin: "auto",padding: "10px 0", width: "fit-content" }}>
+      <h2 style={{ margin: "auto", padding: "10px 0", width: "fit-content", color: "var(--goethe-accent-color)" }}>
         Entdecken Sie unsere verschiedenen Küchen:
       </h2>
       <div className={styles.gridContainer}>

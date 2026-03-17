@@ -1,6 +1,6 @@
 :root {
-  --card-background: #505050;
-  --card-background-hover: #484848;
+  --card-background: #dfdfdf;
+  --card-shadow: #969696;
 }
 
 .homePageBody {
@@ -25,15 +25,24 @@
 .gridContainer .gridCard {
   text-decoration: none;
   background-color: var(--card-background);
-  color: var(--link);
+  box-shadow: 0 0 10px 0 var(--card-shadow);
+  color: var(--font-color);
   border-radius: 20px;
   padding: 20px;
   overflow: hidden;
 }
 
 .gridContainer .gridCard:hover {
-  box-shadow: 0 0 20px 0 rgb(80, 80, 80);
+  box-shadow: 0 0 20px 0 var(--card-shadow);
   transition: 0.1s;
+}
+
+.gridContainer .gridCard .link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--link);
 }
 
 .gridContainer .gridCard .link:hover {
@@ -43,6 +52,8 @@
 }
 
 .gridContainer .flagImg {
+  margin-bottom: 10px;
   width: 100%;
   aspect-ratio: 3/2;
+  border-radius: 10px;
 }

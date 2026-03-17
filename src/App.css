@@ -2,17 +2,18 @@
   /* Global for everything */
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box; 
-  --font-color: aliceblue;
+  --font-color: #000000;
   
   /* Global link vars */
+  --goethe-accent-color: #6EC1E4;
   --link: #3fbbe5;
   --link-hover: #3fd4fd;
   --link-visited: #3f9bc5;
 
   /* Vars for header body and footer*/
-  --body-background: #707070;
-  --box-background: #505050;
-  --box-border: #808080;
+  --body-background: #ffffff;
+  --box-background: #ffffff;
+  --box-border: #80808000;
 }
 
 .link {
