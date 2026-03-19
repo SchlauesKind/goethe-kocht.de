@@ -1,22 +1,75 @@
-import styles from "./migrate.module.css"
+import { useEffect, useState } from "react";
+import styles from "./migrate.module.css";
+import me_icon from "./mini_icon.svg";
 
-function MigratePlate () {
+function MigratePlate() {
+  const isLocalhost = window.location.hostname === "schlaueskind.github.io";
+  if (isLocalhost) {
+    return null;
+  }
+  const [viewMode, setViewMode] = useState<"full" | "mini">(() => {
+    // This function acts only the first time
+    const savedState = sessionStorage.getItem("viewMode");
+    return savedState === "mini" ? "mini" : "full";
+  });
 
-    return (
-        <div className={styles.backPlate}>
-            <div className={styles.plateContainer}>
-                <div><h1>Diese Seite kann outdated sein</h1>
-                <p>
-                    Sie verwenden gerade die Webseite, die in ihrer Entwicklung und Aktualisierung eingefroren ist. <br />
-                    Wechseln Sie zu der aktuellsten Seite um Kochbuch 2.0 zu erleben!
-                </p></div>
-                <div className={styles.buttonContainer}>
-                    <a className={`${styles.migrateButton} ${styles.button}`} href="https://schlaueskind.github.io/goethe-kocht.de/">Akzeptieren</a>
-                    <div className={`${styles.stayButton} ${styles.button}`}>Ablehnen</div>
-                </div>
+  const handleMinimize = () => {
+    setViewMode("mini");
+    sessionStorage.setItem("viewMode", "mini");
+  };
+
+  useEffect(() => {
+    const savedState = sessionStorage.getItem("viewMode");
+    if (savedState === "mini") {
+      setViewMode("mini");
+    } else {
+      setViewMode("full");
+    }
+  }, []);
+
+  return (
+    <div className={viewMode === "mini" ? "mini" : "full"}>
+      {viewMode === "mini" ? (
+        /* minimalized view */
+        <a
+          className={styles.redirectButton}
+          href="https://schlaueskind.github.io/goethe-kocht.de"
+        >
+          <img className={styles.redirectIcon} src={me_icon} alt="ME" />
+        </a>
+      ) : (
+        /* expanded view */
+        <div className={styles.banner}>
+          <div className={styles.plateContainer}>
+            <div>
+              <h1>Diese Seite kann outdated sein</h1>
+              <p>
+                Sie verwenden gerade die Webseite, die in ihrer Entwicklung und
+                Aktualisierung eingefroren ist. <br />
+                <br />
+                Wechseln Sie zu der aktuellsten Seite um den neusten Kochbuch zu
+                erleben. Beim klicken auf "Akzeptieren" werden Sie automatisch
+                zur neuen Seite weitergeleitet.
+              </p>
             </div>
+            <div className={styles.buttonContainer}>
+              <a
+                className={`${styles.migrateButton} ${styles.button}`}
+                href="https://schlaueskind.github.io/goethe-kocht.de/"
+              >
+                Akzeptieren
+              </a>
+              <div
+                onClick={handleMinimize}
+                className={`${styles.stayButton} ${styles.button}`}
+              >
+                Ablehnen
+              </div>
+            </div>
+          </div>
         </div>
-    );
+      )}
+    </div>
+  );
 }
 export default MigratePlate;
-
