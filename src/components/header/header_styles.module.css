@@ -1,71 +1,36 @@
-:root {
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
-
 /* Header styles */
 .header {
-  border-bottom: solid 2px var(--box-border);
-  display: flex;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   background-color: var(--box-background);
-  height: 80px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  overflow: visible;
+  display: flex;
+  padding: 3px 40px;
+  height: 60px;
 }
 
 /* Flex container styles */
 .flexContainer {
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
 }
 
 /* Items styles */
 .item {
-  background-color: var(--header-button-background);
-  border: 1px solid var(--header-button-border);
-  border-radius: 10px;
-  padding: 10px;
-  height: 50px;
-  max-width: 150px;
-}
-
-.item:hover {
-  background-color: var(--header-button-background-hover);
+  height: 100%;
 }
 
 /* Logo styles */
 
 .logo {
-  width: auto;
   height: 100%;
 }
 
-/* Up button styles */
-
-.upButton {
-  opacity: 0.3;
-  position: fixed;
-  bottom: 90px;
-  left: 20px;
-  width: 0;
-  height: 0;
-}
-
-.upButton:hover {
-  transition: 0.1s;
-  opacity: 1;
-}
-
-.upButton .logo {
-  width: 10vh;
-  height: 10vh;
-}
-
 .wellcome {
-  color: aliceblue;
+  color: var(--font-color);
   margin: auto auto;
 }

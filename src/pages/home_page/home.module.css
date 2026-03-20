@@ -1,37 +1,66 @@
+:root {
+  --card-background: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.25);
+}
+
 .homePageBody {
-  color: aliceblue;
+  color: var(--font-color);
+  background-color: var(--body-background);
 }
 
 .homePageHeader {
-  color: aliceblue;
-  font-size: 2.5em;
+  color: var(--font-color);
+  font-size: 2.5rem;
   text-align: center;
-  border-bottom: solid 2px aliceblue;
 }
+
+/* Grid Container */
 
 .gridContainer {
+  align-items: start;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 10px;
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
 }
 
-.gridCard {
+.gridContainer .gridCard {
+  min-height: 400px;
   text-decoration: none;
   background-color: var(--card-background);
-  color: var(--link);
-  border-radius: 20px;
-  padding: 20px;
+  box-shadow: 0 0 10px 0 var(--card-shadow);
+  color: var(--font-color);
+  border-radius: 3px;
   overflow: hidden;
 }
 
-.gridCard:hover {
-  cursor: pointer;
-  color: var(--link-hover);
-  background-color: var(--card-background-hover);
+.gridContainer .gridCard:hover {
+  box-shadow: 0 0 30px 0 var(--card-shadow);
   transition: 0.1s;
 }
 
-.flagImg {
+.gridContainer .gridCard .link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--link);
+}
+
+.gridContainer .gridCard .link:hover {
+  cursor: pointer;
+  color: var(--link-hover);
+  transition: 0.1s;
+}
+
+.gridContainer .flagImg {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/2;
+}
+
+.gridContainer .gridCard .cardText {
+  padding: 0 15px;
 }

@@ -7,6 +7,8 @@ import KitchenPage from "./pages/kitchen/KitchenPage";
 /* Components import */
 import HeaderComponent from "./components/header/header_component";
 import FooterComponent from "./components/footer/footer_component";
+import UpButton from "./components/up_button/up_button";
+import MigratePlate from "./components/migrate_button/migrate";
 
 /* System imports */
 import { Outlet, Routes, Route } from "react-router-dom";
@@ -16,9 +18,11 @@ function MainLayout() {
   return (
     <div className="layout">
       <HeaderComponent />
+      <UpButton />
       <main>
         <Outlet />
       </main>
+      <MigratePlate />
       <FooterComponent />
     </div>
   );

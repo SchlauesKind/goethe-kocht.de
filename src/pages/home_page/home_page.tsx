@@ -5,25 +5,39 @@ import flag_data from "../kitchen/kitchen_data.json";
 function HomePage() {
   return (
     <div className={styles.homePageBody}>
-      <h2 style={{ margin: "10px auto", width: "fit-content"}}>Entdecken Sie unsere verschiedenen Küchen:</h2>
+      <h2
+        style={{
+          margin: "auto",
+          padding: "10px 0",
+          width: "fit-content",
+          color: "var(--goethe-accent-color)",
+          fontSize: "1.7em",
+          fontWeight: "bold",
+        }}
+      >
+        Entdecken Sie unsere verschiedenen Küchen:
+      </h2>
       <div className={styles.gridContainer}>
         {flag_data.map((kitchen) => (
-          <Link
-            key={kitchen.id}
-            to={`/kitchen/${kitchen.path}/index.html`}
-            className={styles.gridCard}
-          >
+          <div className={styles.gridCard}>
             <img
               src={`${import.meta.env.BASE_URL}flags/${kitchen["flag-file-name"]}`}
               alt={kitchen.title}
               className={styles.flagImg}
             />
-            <h3>{kitchen.title}</h3>
-            <p>{kitchen.description}</p>
-          </Link>
+            <p className={styles.cardText}>
+              <Link
+                key={kitchen.id}
+                to={`/kitchen/${kitchen.path}/index.html`}
+                className={styles.link}
+              >
+                {kitchen.title}
+              </Link>
+              <p>{kitchen.description}</p>
+            </p>
+          </div>
         ))}
       </div>
-      
     </div>
   );
 }
