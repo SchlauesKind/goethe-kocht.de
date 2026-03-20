@@ -1,0 +1,65 @@
+/* Hintergrund wie argentinische Flagge */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    
+    background: linear-gradient(
+        to bottom,
+        #a6d8ff 0%,
+        #eaf6ff 35%,
+        #ffffff 50%,
+        #eaf6ff 65%,
+        #a6d8ff 100%
+    );
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Box in der Mitte */
+.container{
+    background:white;
+    width:700px;
+    max-width:90%;
+    padding:30px;
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Überschrift */
+h1{
+    text-align:center;
+    color:#2a6f9e;
+}
+
+/* Unterüberschriften */
+h2{
+    margin-top:25px;
+    color:#444;
+}
+
+/* Liste schöner machen */
+ul, ol{
+    padding-left:20px;
+    line-height:1.6;
+}
+
+/* Tipp-Box */
+.footer{
+    margin-top:25px;
+    padding:15px;
+    background:#f0f9ff;
+    border-radius:6px;
+}
+.button {
+    display: inline-block;
+    background-color: #dc143c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 15px;
+}

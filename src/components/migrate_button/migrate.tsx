@@ -3,8 +3,9 @@ import styles from "./migrate.module.css";
 import me_icon from "./mini_icon.svg";
 
 function MigratePlate() {
-  const isLocalhost = window.location.hostname === "schlaueskind.github.io";
-  if (isLocalhost) {
+  const myHost = "goethe-kocht-de.verel.app";
+  const isMyhost = window.location.hostname === myHost;
+  if (isMyhost) {
     return null;
   }
   const [viewMode, setViewMode] = useState<"full" | "mini">(() => {
@@ -31,10 +32,7 @@ function MigratePlate() {
     <div className={viewMode === "mini" ? "mini" : "full"}>
       {viewMode === "mini" ? (
         /* minimalized view */
-        <a
-          className={styles.redirectButton}
-          href="https://schlaueskind.github.io/goethe-kocht.de"
-        >
+        <a className={styles.redirectButton} href={myHost}>
           <img className={styles.redirectIcon} src={me_icon} alt="ME" />
         </a>
       ) : (
@@ -55,7 +53,7 @@ function MigratePlate() {
             <div className={styles.buttonContainer}>
               <a
                 className={`${styles.migrateButton} ${styles.button}`}
-                href="https://schlaueskind.github.io/goethe-kocht.de/"
+                href={myHost}
               >
                 Akzeptieren
               </a>
