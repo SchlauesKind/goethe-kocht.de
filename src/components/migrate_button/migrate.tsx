@@ -3,9 +3,13 @@ import styles from "./migrate.module.css";
 import me_icon from "./mini_icon.svg";
 
 function MigratePlate() {
-  const myHost = "goethe-kocht-de.vercel.app/";
-  const myURL = `https://${myHost}`;
+  const myHost = "goethe-kocht-de.vercel.app";
+  const myURL = `https://${myHost}/`;
   const isMyhost = window.location.hostname === myHost;
+
+  if (isMyhost) {
+    return null;
+  }
 
   const [viewMode, setViewMode] = useState<"full" | "mini">(() => {
     // This function acts only the first time
@@ -27,49 +31,46 @@ function MigratePlate() {
     }
   }, []);
 
-  if (isMyhost) {
-    return null;
-  } else
-    return (
-      <div className={viewMode === "mini" ? "mini" : "full"}>
-        {viewMode === "mini" ? (
-          /* minimalized view */
-          <a className={styles.redirectButton} href={myURL}>
-            <img className={styles.redirectIcon} src={me_icon} alt="ME" />
-          </a>
-        ) : (
-          /* expanded view */
-          <div className={styles.banner}>
-            <div className={styles.plateContainer}>
-              <div>
-                <h1>Diese Seite kann outdated sein</h1>
-                <p>
-                  Sie verwenden gerade die Webseite, die in ihrer Entwicklung
-                  und Aktualisierung eingefroren ist. <br />
-                  <br />
-                  Wechseln Sie zu der aktuellsten Seite um den neusten Kochbuch
-                  zu erleben. Beim klicken auf "Akzeptieren" werden Sie
-                  automatisch zur neuen Seite weitergeleitet.
-                </p>
-              </div>
-              <div className={styles.buttonContainer}>
-                <a
-                  className={`${styles.migrateButton} ${styles.button}`}
-                  href={myURL}
-                >
-                  Akzeptieren
-                </a>
-                <div
-                  onClick={handleMinimize}
-                  className={`${styles.stayButton} ${styles.button}`}
-                >
-                  Ablehnen
-                </div>
+  return (
+    <div className={viewMode === "mini" ? "mini" : "full"}>
+      {viewMode === "mini" ? (
+        /* minimalized view */
+        <a className={styles.redirectButton} href={myURL}>
+          <img className={styles.redirectIcon} src={me_icon} alt="ME" />
+        </a>
+      ) : (
+        /* expanded view */
+        <div className={styles.banner}>
+          <div className={styles.plateContainer}>
+            <div>
+              <h1>Diese Seite kann outdated sein</h1>
+              <p>
+                Sie verwenden gerade die Webseite, die in ihrer Entwicklung und
+                Aktualisierung eingefroren ist. <br />
+                <br />
+                Wechseln Sie zu der aktuellsten Seite um den neusten Kochbuch zu
+                erleben. Beim klicken auf "Akzeptieren" werden Sie automatisch
+                zur neuen Seite weitergeleitet.
+              </p>
+            </div>
+            <div className={styles.buttonContainer}>
+              <a
+                className={`${styles.migrateButton} ${styles.button}`}
+                href={myURL}
+              >
+                Akzeptieren
+              </a>
+              <div
+                onClick={handleMinimize}
+                className={`${styles.stayButton} ${styles.button}`}
+              >
+                Ablehnen
               </div>
             </div>
           </div>
-        )}
-      </div>
-    );
+        </div>
+      )}
+    </div>
+  );
 }
 export default MigratePlate;
